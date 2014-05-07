@@ -34,7 +34,7 @@ function gotFileSystem(lfs) {
 
 function gotDirectory(ldir) {
     dir = ldir;
-    dir.getFile("kmdTest1.txt", {create: true}, gotFileEntry);
+    dir.getFile("kmdExport.xml", {create: true}, gotFileEntry);
 
 }
 
