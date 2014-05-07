@@ -6,6 +6,8 @@ var xmlString = "";
 function fileInit()
 {
     //initFs();
+
+
     generateXML();
 }
 
@@ -47,7 +49,7 @@ function gotFileWriter(writer) {
 
     alert("start store file, wait for success");
     writer.write(xmlString);
-    alert("the file was stored at:" + appBaseURL + "\kmd\kmdTest1.txt");
+    alert("the file was stored at:" + appBaseURL + "\\kmd\\kmdTest1.txt");
     writer.abort();
     // contents of file now 'some different text'
 }
