@@ -4,7 +4,7 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "cz.initedsolutions.kmd"
-        version   = "0.24">
+        version   = "0.25">
     <!--
       1.0
         a- oprava vzhledu
@@ -12,7 +12,7 @@
         - milestone 2
         1.3 added alerts to find the fail
         1.4 fail store
-      2.4
+      2.5
         - added generate gxml to file
     -->
 
