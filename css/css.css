@@ -1,0 +1,305 @@
+@media only screen and (min-width: 0px)  and (max-width: 370px) {
+
+    .topMenu {
+        height: 5% !important;
+        min-height: 50px;
+    }
+    .mainHeader h1, .mainHeader label, .mainHeader select,
+    .topMenuMiddle button {
+        font-size: 0.5em;
+    }
+    .categoryWidget, .categoryWidget select {
+        font-size: 0.8em;
+    }
+    .mainHeader input {
+        font-size: 0.5em;
+        line-height: 1em;
+    }
+    .mainHeader div.left {
+        width: 50%;
+    }
+    .mainHeader div.right {
+        width: 50%;
+    }
+    .tableHeader {
+        font-size: 0.5em;
+    }
+    div.description {
+        width: 15% !important;
+    }
+    span.description {
+        width: 15% !important;
+    }
+    .content input {
+        font-size: 0.5em;
+    }
+}
+@media only screen and (min-width: 371px)  and (max-width: 430px) {
+
+    .topMenu {
+        height: 5% !important;
+        min-height: 60px;
+    }
+    .topMenuMiddle button {
+        font-size: 0.7em;
+    }
+    .mainHeader h1, .mainHeader label, .mainHeader select {
+        font-size: 0.8em;
+        line-height: 1em;
+    }
+    .mainHeader div.left {
+        width: 50%;
+    }
+    .mainHeader div.right {
+        width: 50%;
+    }
+    .tableHeader {
+        font-size: 0.7em;
+    }
+    div.description {
+        width: 15% !important;
+    }
+    span.description {
+        width: 15% !important;
+    }
+    .content input {
+        font-size: 0.7em;
+    }
+}
+@media only screen and (min-width: 431px)  and (max-width: 470px) {
+
+    .mainHeader h1 {
+        font-size: 1em;
+        line-height: 1em;
+    }
+    .mainHeader div.left {
+        width: 50%;
+    }
+    .mainHeader div.right {
+        width: 50%;
+    }
+    .tableHeader {
+        font-size: 0.8em;
+    }
+    div.description {
+        width: 15% !important;
+    }
+    span.description {
+        width: 15% !important;
+    }
+}
+
+@media only screen and (min-width: 471px)  and (max-width: 800px) {
+
+    .mainHeader h1 {
+        font-size: 1em;
+        line-height: 1em;
+    }
+    .mainHeader div.left {
+        width: 50%;
+    }
+    .mainHeader div.right {
+        width: 50%;
+    }
+    div.description {
+        width: 35% !important;%;
+    }
+    span.description {
+        width: 35% !important;
+    }
+}
+
+@media only screen and (min-width: 801px)  {
+
+    .mainHeader h1 {
+        font-size: 1em;
+        line-height: 1em;
+    }
+    .mainHeader div.left {
+        width: 50%;
+    }
+    .mainHeader div.right {
+        width: 50%;
+    }
+    div.description {
+        width: 45% !important;
+    }
+    span.description {
+        width: 45% !important;
+    }
+}
+
+
+html, body {
+    width: 100%;
+    max-width: 1400px;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+input, li, span {
+    padding: 0px;
+    margin: 0px;
+}
+input {
+    text-align: center;
+}
+
+/* top menu */
+.topMenu {
+    height: 10%;
+}
+
+
+
+.topMenuMiddle button {
+    width: 20%;
+    float: left;
+}
+div.categoryWidget {
+    width: 80%;
+    display: inline-block;
+    text-align: center;
+    padding-top: 4%;
+}
+#categorySelectPrev {
+    padding: 0px;
+    margin: 0px;
+    float: left;
+}
+.topMenuMiddle {
+    width: 80%;
+    height: 100%;
+    float: left;
+}
+.topMenuMiddle button {
+    height: 100%;
+}
+
+
+/*------------- main header -----*/
+.mainHeader {
+    border: 1px solid;
+    margin: 4px;
+    padding: 4px;
+}
+.mainHeader div.left {
+    float: left;
+}
+.mainHeader div.right {
+    float: left;
+}
+.left label {
+    margin-left: 40%;
+}
+.right div.space {
+    height: 1em;
+    margin-top: 5px;
+}
+.right label {
+    font-weight: bold;
+}
+.right input {
+    width: 40%;
+}
+
+
+.mainHeader input {
+    border: 0px;
+    border-bottom: 1px solid;
+}
+.left #category {
+    width: 100%;
+}
+.left #code {
+    width: 35%;
+}
+
+.mainHeader h1 {
+    margin: 0px;
+}
+
+
+/*------------- table -----*/
+div.tableHeader {
+    border: 1px solid;
+}
+.tableHeader table {
+    border-collapse:collapse;
+}
+
+td
+{
+    text-align:center;
+    width: 10%;
+}
+
+.tableHeader div {
+    display: table-cell;
+    border-right: 1px solid;
+    width: 12%;
+    vertical-align: middle;
+    text-align: center;
+    height: 3.1em;
+}
+
+.tableHeader span {
+    display: table-cell;
+    border-right: 1px solid;
+    width: 12%;
+    vertical-align: middle;
+    text-align: center;
+    height: 3.1em;
+}
+.tableHeader input, .tableHeader textarea {
+    width: 100%;
+    border: 0px;
+    text-align: center;
+
+    margin: 0px;
+    resize: none;
+    overflow:hidden
+
+}
+
+div.fourLines {
+    font-size: 0.5em;
+    height: 6.2em;
+}
+div.balance {
+    border-right: 0px;
+}
+ul {
+    border: 1px solid;
+    border-bottom: 0px;
+    padding: 0px;
+    margin: 0px;
+}
+li {
+    list-style-type: none;
+    border-bottom: 1px solid;
+}
+.content span {
+    border-right: 1px solid;
+    display: table-cell;
+    width: 12%;
+}
+.content span.last {
+    border: 0px;
+}
+
+.description input {
+    text-align: left;
+    text-indent: 2px;
+}
+.content input {
+    border: 0px solid;
+    width: 100%;
+}
+.row {
+    width: 10%;
+    height: 100%;
+}
+
+

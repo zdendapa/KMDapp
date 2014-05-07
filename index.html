@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+    <!-- <meta name="viewport" content="user-scalable=yes, initial-scale=1, maximum-scale=2, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" /> -->
+    <meta name="viewport" content="user-scalable=yes, initial-scale=1, maximum-scale=2, minimum-scale=1, target-densitydpi=device-dpi" />
+
+    <script>
+        var workLocal = false;
+
+
+        var pgReady = false;
+
+
+        function onLoad() {
+            if(workLocal)
+                onDeviceReady();
+            else
+                document.addEventListener("deviceready", onDeviceReady, false);
+        }
+
+
+    </script>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="phonegap.js"></script>
+    <script src="file.js"></script>
+    <script src="file-transfer.js"></script>
+
+    <script src="js/imgcache.js"></script>
+    <script src="js/file2.js"></script>
+    <script src="js/javascript.js"></script>
+    <script src="js/database.js"></script>
+    <link rel="stylesheet" href="css/css.css" />
+
+
+    <title>MDK app</title>
+</head>
+
+<body onload="onLoad()">
+<div class="topMenu">
+    <button id="categorySelectPrev" class="row"><--</button>
+    <div class="topMenuMiddle">
+        <button onclick="newWTable()">+ Insert new Page</button>
+        <div class="categoryWidget">
+            <label for="categorySelect">Current category:</label>
+            <select id="categorySelect" class="registraceSelectButtons" onchange="db.loadSheet();db.setOpenedSheet()"></select>
+        </div>
+    </div>
+    <button id="categorySelectNext" class="row">--></button>
+</div>
+<div class="main">
+    <div id="first">
+        <div class="mainHeader">
+            <div class="left">
+                <input id="category" onchange="db.headerUpdate();categorySelectUpdate()">
+                <h1>TMM Category Description</h1>
+                <label>Code#</label>
+                <select id="code" class="registraceSelectButtons" onchange="db.headerUpdate()">
+                    <option value="0"></option>
+                    <option value="4006">4006</option>
+                    <option value="4007">4007</option>
+                    <option value="4008">4008</option>
+                    <option value="4009">4009</option>
+                    <option value="4010">4010</option>
+                    <option value="4011">4011</option>
+                    <option value="4012">4012</option>
+                    <option value="4013">4013</option>
+                    <option value="4014">4014</option>
+                    <option value="4015">4015</option>
+                    <option value="4016">4016</option>
+                    <option value="4017">4017</option>
+                    <option value="4018">4018</option>
+                    <option value="4019">4019</option>
+                    <option value="4020">4020</option>
+                    <option value="4021">4021</option>
+                    <option value="4517">4517</option>
+                    <option value="4518">4518</option>
+                    <option value="4519">4519</option>
+                    <option value="4520">4520</option>
+                    <option value="4521">4521</option>
+                    <option value="5022">5022</option>
+                    <option value="5023">5023</option>
+                    <option value="5024">5024</option>
+                    <option value="5025">5025</option>
+                    <option value="5026">5026</option>
+                    <option value="6027">6027</option>
+                    <option value="6028">6028</option>
+                    <option value="6029">6029</option>
+                    <option value="6030">6030</option>
+                    <option value="6031">6031</option>
+                    <option value="6032">6032</option>
+                    <option value="6033">6033</option>
+                </select>
+            </div>
+            <div class="right">
+                <div class="space"></div>
+                <label>I plan to spend: $</label>
+                <input id="planSpend" onchange="priceFormatCheck(this)">
+            </div>
+            <div style="clear: both; float: none"></div>
+        </div>
+        <div class="table">
+            <div class="tableHeader">
+                <div class="oneLine">Date</div>
+                <div class="twoLines">How Paid</div>
+                <div class="description">Description</div>
+                <div class="twoLines">Check or Ref#</div>
+                <div class="twoLines">Payment<br>Amount</div>
+                <div class="balance">Available Balance</div>
+            </div>
+            <ul class="content">
+            </ul>
+        </div>
+    </div>
+<button onclick="fileInit()">export file</button>
+</div>
+</body>
+<script type="text/javascript" charset="utf-8">
+/*
+    if(workLocal)
+        onDeviceReady();
+    else
+        document.addEventListener("deviceready", onDeviceReady, false);
+*/
+
+    //alert("1.Jvavascript is ok");
+
+
+var delay=1500;//1 seconds
+setTimeout(function(){
+    onDeviceReadyDelay();
+    //your code to be executed after 1 seconds
+},delay);
+
+</script>
+</html>
