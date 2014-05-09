@@ -5,7 +5,7 @@
         min-height: 50px;
     }
     .mainHeader h1, .mainHeader label, .mainHeader select,
-    .topMenuMiddle button {
+    .topMenuMiddle div {
         font-size: 0.5em;
     }
     .categoryWidget, .categoryWidget select {
@@ -17,6 +17,9 @@
     }
     .mainHeader div.left {
         width: 50%;
+    }
+    .left img {
+        width: 1.5em;
     }
     .mainHeader div.right {
         width: 50%;
@@ -40,7 +43,7 @@
         height: 5% !important;
         min-height: 60px;
     }
-    .topMenuMiddle button {
+    .topMenuMiddle div {
         font-size: 0.7em;
     }
     .mainHeader h1, .mainHeader label, .mainHeader select {
@@ -49,6 +52,9 @@
     }
     .mainHeader div.left {
         width: 50%;
+    }
+    .left img {
+        width: 2em;
     }
     .mainHeader div.right {
         width: 50%;
@@ -67,13 +73,18 @@
     }
 }
 @media only screen and (min-width: 431px)  and (max-width: 470px) {
-
+    .topMenuMiddle div {
+        font-size: 0.8em;
+    }
     .mainHeader h1 {
         font-size: 1em;
         line-height: 1em;
     }
     .mainHeader div.left {
         width: 50%;
+    }
+    .left img {
+        width: 2em;
     }
     .mainHeader div.right {
         width: 50%;
@@ -98,6 +109,9 @@
     .mainHeader div.left {
         width: 50%;
     }
+    .left img {
+        width: 2em;
+    }
     .mainHeader div.right {
         width: 50%;
     }
@@ -117,6 +131,9 @@
     }
     .mainHeader div.left {
         width: 50%;
+    }
+    .left img {
+        width: 2em;
     }
     .mainHeader div.right {
         width: 50%;
@@ -168,6 +185,9 @@ div.categoryWidget {
     margin: 0px;
     float: left;
 }
+div.topMenu {
+    display: none;
+}
 .topMenuMiddle {
     width: 80%;
     height: 100%;
@@ -190,8 +210,15 @@ div.categoryWidget {
 .mainHeader div.right {
     float: left;
 }
+.left img {
+    float: left;
+    margin-left: 5% ;
+}
+.left > div {
+    margin-top: 2%;
+}
 .left label {
-    margin-left: 40%;
+    margin-left: 15%;
 }
 .right div.space {
     height: 1em;
@@ -220,6 +247,10 @@ div.categoryWidget {
     margin: 0px;
 }
 
+/*------------- sheets -----*/
+div.sheets {
+
+}
 
 /*------------- table -----*/
 div.tableHeader {
@@ -297,9 +328,111 @@ li {
     border: 0px solid;
     width: 100%;
 }
-.row {
-    width: 10%;
+div.row {
     height: 100%;
+    width: 10%;
+    position: relative;
+    background: grey;
+    text-align: center;
+}
+div#categorySelectPrev {
+    float: left;
+    border-right: 2px solid white;
+}
+div#categorySelectNext {
+    left: 90%;
+}
+.topMenuMiddle .row {
+    float: left;
+    overflow: hidden;
 }
 
+div.row {
+    background: #d9dde0;
+    background-image: -webkit-linear-gradient(top, #d9dde0, #a4a9ad);
+    background-image: -moz-linear-gradient(top, #d9dde0, #a4a9ad);
+    background-image: -ms-linear-gradient(top, #d9dde0, #a4a9ad);
+    background-image: -o-linear-gradient(top, #d9dde0, #a4a9ad);
+    background-image: linear-gradient(to bottom, #d9dde0, #a4a9ad);
+    font-family: Arial;
+    color: #000000;
+    text-decoration: none;
+}
 
+div.row:hover {
+    background: #e3e3e3;
+    background-image: -webkit-linear-gradient(top, #e3e3e3, #daddde);
+    background-image: -moz-linear-gradient(top, #e3e3e3, #daddde);
+    background-image: -ms-linear-gradient(top, #e3e3e3, #daddde);
+    background-image: -o-linear-gradient(top, #e3e3e3, #daddde);
+    background-image: linear-gradient(to bottom, #e3e3e3, #daddde);
+    text-decoration: none;
+}
+
+#rowRight {
+    display: block;
+    position: absolute;
+    top: 40%;
+    margin-left: 10px;
+}
+#rowRight:before, #rowRight:after {
+    content: "";
+    position: absolute;
+    background: white;
+}
+#rowRight:before {
+    top: 4px;
+    width: 15px;
+    height: 8px;
+}
+#rowRight:after {
+    left: 12px;
+    border-top: 8px solid transparent;
+    border-left: 9px solid white;
+    border-bottom: 8px solid transparent;
+    background: transparent;
+
+}
+
+#rowLeft {
+    display: inline-block;
+    position: absolute;
+    top: 40%;
+    margin-left: -10px;
+
+}
+#rowLeft:before, #rowLeft:after {
+    content: "";
+    position: absolute;
+    background: white;
+}
+#rowLeft:before {
+    top: 4px;
+    left: 5px;
+    width: 15px;
+    height: 8px;
+}
+#rowLeft:after {
+    border-top: 8px solid transparent;
+    border-right: 9px solid white;
+    border-bottom: 8px solid transparent;
+    background: transparent;
+
+}
+
+/* ------------------ */
+div.instructions {
+    display: none;
+    font-size: 0.8em;
+}
+.instructions input {
+    margin-left: 2%;
+    margin-right: 1%;
+}
+.instructions h1 {
+    font-size: 1em;
+    padding: 4%;
+    padding-top: 0px;
+    padding-bottom: 2%;
+    margin: 0px;
+}

@@ -38,83 +38,103 @@
     <title>MDK app</title>
 </head>
 
-<body onload="onLoad()">
+<body style="display: none" onload="onLoad()">
 <div class="topMenu">
-    <button id="categorySelectPrev" class="row"><--</button>
+
+    <div id="categorySelectPrev" class="row">
+        <div id="rowLeft"></div>
+    </div>
+
     <div class="topMenuMiddle">
-        <button onclick="newWTable()">+ Insert new Page</button>
+        <div class="row" onclick="newWTable()">
+            + Insert new Page
+        </div>
         <div class="categoryWidget">
             <label for="categorySelect">Current category:</label>
-            <select id="categorySelect" class="registraceSelectButtons" onchange="db.loadSheet();db.setOpenedSheet()"></select>
+            <select id="categorySelect" class="registraceSelectButtons" onchange="db.loadSheet();db.setOpenedSheet();memPrev()">
+            </select>
         </div>
     </div>
-    <button id="categorySelectNext" class="row">--></button>
+    <div id="categorySelectNext" class="row">
+        <div id="rowRight"></div>
+    </div>
 </div>
 <div class="main">
-    <div id="first">
-        <div class="mainHeader">
-            <div class="left">
-                <input id="category" onchange="db.headerUpdate();categorySelectUpdate()">
-                <h1>TMM Category Description</h1>
-                <label>Code#</label>
-                <select id="code" class="registraceSelectButtons" onchange="db.headerUpdate()">
-                    <option value="0"></option>
-                    <option value="4006">4006</option>
-                    <option value="4007">4007</option>
-                    <option value="4008">4008</option>
-                    <option value="4009">4009</option>
-                    <option value="4010">4010</option>
-                    <option value="4011">4011</option>
-                    <option value="4012">4012</option>
-                    <option value="4013">4013</option>
-                    <option value="4014">4014</option>
-                    <option value="4015">4015</option>
-                    <option value="4016">4016</option>
-                    <option value="4017">4017</option>
-                    <option value="4018">4018</option>
-                    <option value="4019">4019</option>
-                    <option value="4020">4020</option>
-                    <option value="4021">4021</option>
-                    <option value="4517">4517</option>
-                    <option value="4518">4518</option>
-                    <option value="4519">4519</option>
-                    <option value="4520">4520</option>
-                    <option value="4521">4521</option>
-                    <option value="5022">5022</option>
-                    <option value="5023">5023</option>
-                    <option value="5024">5024</option>
-                    <option value="5025">5025</option>
-                    <option value="5026">5026</option>
-                    <option value="6027">6027</option>
-                    <option value="6028">6028</option>
-                    <option value="6029">6029</option>
-                    <option value="6030">6030</option>
-                    <option value="6031">6031</option>
-                    <option value="6032">6032</option>
-                    <option value="6033">6033</option>
-                </select>
+    <div class="sheets">
+        <div id="first">
+            <div class="mainHeader">
+                <div class="left">
+                    <input id="category" onchange="db.headerUpdate();categorySelectUpdate()">
+                    <h1>TMM Category Description</h1>
+                    <img src="img/LittleGuyLogoBig.jpg">
+                    <div>
+                        <label>Code#</label>
+                        <select id="code" class="registraceSelectButtons" onchange="db.headerUpdate()">
+                            <option>4006 &quot;Auto Expenses&quot;</option>
+                            <option>4007 &quot;Food/Sundries&quot;</option>
+                            <option>4008 &quot;Home Maintenance&quot;</option>
+                            <option>4009 &quot;Insurance&quot;</option>
+                            <option>4010 &quot;Medical&quot;</option>
+                            <option>4011 &quot;Housing&quot;</option>
+                            <option>4012 &quot;Telephone&quot;</option>
+                            <option>4013 &quot;Utilities&quot;</option>
+                            <option>4014 &quot;Open&quot;</option>
+                            <option>4015 &quot;Open&quot;</option>
+                            <option>4016 &quot;Unident ified Cash w/d&quot;</option>
+                            <option>4017 &quot;Open&quot;</option>
+                            <option>4018 &quot;Open&quot;</option>
+                            <option>4019 &quot;Oenn</option>
+                            <option>4020 &quot;Open&quot;</option>
+                            <option>4021 &quot;Open&quot;</option>
+                            <option>4517 &quot;Child#1-A&quot;</option>
+                            <option>4517 &quot;Child#2-B&quot;</option>
+                            <option>4517 &quot;Child#3-C&quot;</option>
+                            <option>4517 &quot;Child#4-D&quot;</option>
+                            <option>4517 &quot;Child#5-E&quot;</option>
+                            <option>4518 &quot;for Primary Wage Earner #1&quot;</option>
+                            <option>4519 &quot;for Primary Wage Earner #2&quot;</option>
+                            <option>4520 &quot;Pet#1-A&quot;</option>
+                            <option>4520 &quot;Pet#2-B&quot;</option>
+                            <option>4521 &quot;Open&quot;</option>
+                            <option>5023 &quot;Medical Debt / Fees / Charges&quot;</option>
+                            <option>5024 &quot;Loans & Notes Payable&quot;</option>
+                            <option>5025 &quot;Tax Debt I Estimated Tax&quot;</option>
+                            <option>5026 &quot;Open&quot;</option>
+                            <option>6028 &quot;Donations/Gifts&quot;</option>
+                            <option>6029 &quot;Entertainment&quot;</option>
+                            <option>6032 &quot;Savings&quot;</option>
+                            <option>6033 &quot;Vacations&quot;</option>
+                        </select>
+                    </div>
+
+                </div>
+                <div class="right">
+                    <div class="space"></div>
+                    <label>I plan to spend: $</label>
+                    <input id="planSpend" onchange="priceFormatCheck(this)">
+                </div>
+                <div style="clear: both; float: none"></div>
             </div>
-            <div class="right">
-                <div class="space"></div>
-                <label>I plan to spend: $</label>
-                <input id="planSpend" onchange="priceFormatCheck(this)">
+            <div class="table">
+                <div class="tableHeader">
+                    <div class="oneLine">Date</div>
+                    <div class="twoLines">How Paid</div>
+                    <div class="description">Description</div>
+                    <div class="twoLines">Check or Ref#</div>
+                    <div class="twoLines">Payment<br>Amount</div>
+                    <div class="balance">Available Balance</div>
+                </div>
+                <ul class="content">
+                </ul>
             </div>
-            <div style="clear: both; float: none"></div>
-        </div>
-        <div class="table">
-            <div class="tableHeader">
-                <div class="oneLine">Date</div>
-                <div class="twoLines">How Paid</div>
-                <div class="description">Description</div>
-                <div class="twoLines">Check or Ref#</div>
-                <div class="twoLines">Payment<br>Amount</div>
-                <div class="balance">Available Balance</div>
-            </div>
-            <ul class="content">
-            </ul>
         </div>
     </div>
-<button onclick="fileInit()">export file</button>
+    <div class="instructions">
+        <img width="100%" src="img/COMPANIONINSTRUCTIONS.jpg">
+        <div class="pickUp">
+            <h1>Pick any choice to create a new page.</h1>
+        </div>
+    </div>
 </div>
 </body>
 <script type="text/javascript" charset="utf-8">
